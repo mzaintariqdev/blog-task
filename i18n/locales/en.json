@@ -1,0 +1,22 @@
+{
+  "contact": "Contact",
+  "backToHome": "Back to Home",
+  "readMore": "Read More",
+  "myBlog": "My Blog",
+  "searchPost": "Search Posts...",
+  "name": "Name",
+  "email": "Email",
+  "message":"Message",
+  "submit": "Submit",
+  "yourName": "Your Name",
+  "yourEmail": "Your Email",
+  "yourMessage": "Your Message",
+  "nameIsRequired": "Name is required",
+  "formSubmittedSuccessfully":"Form submitted successfully!",
+  "messageIsRequired": "Message is required",
+  "emailIsRequired": "Email is required",
+  "pleaseEnteraValidEmailAddress": "Please enter a valid email address",
+  "2025MyBlogAllRightsReserved":"2025 My Blog. All rights reserved.",
+  "madeByZain": "Made By Zain"
+
+}

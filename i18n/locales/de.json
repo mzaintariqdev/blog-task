@@ -1,0 +1,21 @@
+{
+  "contact": "Kontakt",
+  "backToHome": "Zurück zur Startseite",
+  "readMore": "Weiterlesen",
+  "myBlog": "Mein Blog",
+  "searchPost":"Suche Post...",
+  "name": "Name",
+  "email": "Email",
+  "message":"Nachricht",
+  "submit": "bestätigt",
+  "yourName": "Deine Name",
+  "yourEmail": "Deine Email",
+  "yourMessage": "Deine Nachricht",
+  "formSubmittedSuccessfully":"Formular erfolgreich übermittelt!",
+  "nameIsRequired": "Name ist erforderlich",
+  "messageIsRequired": "Nachricht ist erforderlich",
+  "emailIsRequired": "Email ist erforderlich",
+  "pleaseEnteraValidEmailAddress": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+  "2025MyBlogAllRightsReserved":"2025 Mein Blog. Alle Rechte vorbehalten.",
+  "madeByZain": "Hergestellt von Zain"
+}

@@ -16,7 +16,7 @@
           :to="'/posts/' + post.slug"
           class="mt-4 inline-block text-blue-600 hover:underline font-semibold"
         >
-          Read More →
+        {{ $t('readMore') }}  →
         </NuxtLink>
       </div>
     </div>

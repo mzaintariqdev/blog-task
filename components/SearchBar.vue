@@ -4,7 +4,7 @@
       type="text"
       v-model="query"
       @input="onInput"
-      placeholder="Search posts..."
+      :placeholder="$t('searchPost')" 
       class="w-full p-4 pr-10 border rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
     <svg
