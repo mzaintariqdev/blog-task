@@ -37,7 +37,7 @@
 <script setup>
 import { useI18n } from '#imports'
 // Use i18n for locale management
-const { locale, availableLocales } = useI18n();
+const { setLocale, locale, availableLocales } = useI18n();
 
 // Define language options with flags
 const languageOptions = {
@@ -54,6 +54,6 @@ const localesWithFlags = availableLocales.map((code) => ({
 
 // Switch locale function
 const switchLocale = (code) => {
-  locale.value = code;
+  setLocale(code);
 };
 </script>

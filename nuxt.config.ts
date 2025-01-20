@@ -15,11 +15,17 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
   ],
   i18n: {
+    strategy: 'no_prefix',
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.json' },
       { code: 'de', iso: 'de-DE', file: 'de.json' }
     ],
-    defaultLocale: "en",
     vueI18n: "./i18n.config.ts",
   },
 });
