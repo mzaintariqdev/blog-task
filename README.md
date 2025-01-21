@@ -11,7 +11,8 @@ This project is build on Nuxt 3 and tailwindcss and in this project we have cove
 8. Responsive for all screen till mobile view
 9. a Slug or individual page for every post on click to read more
 10. Pagination is implemented by creating a simple custom component
-11. Deployed on Vercel Here is the Link: https://blog-task-puce.vercel.app/
+11. a Loader when we featch the Posts from mock api
+12. Deployed on Vercel Here is the Link: https://blog-task-puce.vercel.app/
 
 This Project Video display:
 
