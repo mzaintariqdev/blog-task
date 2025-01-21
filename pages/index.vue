@@ -16,7 +16,10 @@
         class="bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition transform"
       >
         <h2 class="text-lg font-semibold text-gray-800">{{ post.title }}</h2>
-        <p class="mt-2 text-gray-600">{{ post.excerpt }}</p>
+        <p class="mt-2 text-gray-600">
+    {{ post.content.substring(0, 20) }} 
+    <span v-if="post.content.length > 20">...</span>
+  </p>
         <NuxtLink
           :to="'/posts/' + post.slug"
           class="mt-4 inline-block text-blue-600 hover:underline font-semibold"
@@ -43,47 +46,42 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
-import { useFetch } from '#app'; // Importing useFetch
+import { useFetch } from '#app';
 import Pagination from '@/components/Pagination.vue';
 import SearchBar from '@/components/SearchBar.vue';
 
-const searchQuery = ref(""); // Track the search query
-const currentPage = ref(1); // Track the current page number
-const postsPerPage = 3; // Number of posts per page
+const searchQuery = ref("");
+const currentPage = ref(1);
+const postsPerPage = 3;
 
-// State variables for loading, error, and posts
 const posts = ref([]);
-const loading = ref(true); // Show loading indicator while fetching
-const error = ref(null); // Store any potential error during fetch
+const loading = ref(true); 
+const error = ref(null); 
 
-// Fetch the posts from the static directory only once when the component is mounted
-const { data, error: fetchError, pending } = useFetch('/api/posts'); // Fetch posts from static folder
+const { data, error: fetchError, pending } = useFetch('/api/posts'); 
 
 onMounted(() => {
-  // Reset loading state on mounted to prevent showing the loader when revisiting the page
   loading.value = pending.value;
 
   if (fetchError.value) {
-    error.value = fetchError.value; // Handle error
-    loading.value = false; // Stop loading if there's an error
+    error.value = fetchError.value; 
+    loading.value = false;
   } else if (data.value) {
-    posts.value = data.value; // Set the posts after data is fetched
-    loading.value = false; // Hide the loading indicator after data is loaded
+    posts.value = data.value; 
+    loading.value = false; 
   }
 });
 
-// Update the search query and reset to the first page only if necessary
 const updateQuery = (query) => {
   searchQuery.value = query;
 
-  // Check if the current page is valid for the filtered results
   const totalFilteredPages = Math.ceil(filteredPosts.value.length / postsPerPage);
   if (currentPage.value > totalFilteredPages) {
-    currentPage.value = totalFilteredPages || 1; // Default to the first page if no results
+    currentPage.value = totalFilteredPages || 1; 
   }
 };
 
-// Filter posts based on the search query
+// Filter posts based on the search query for both title and content
 const filteredPosts = computed(() =>
   posts.value.filter(
     (post) =>
@@ -92,13 +90,11 @@ const filteredPosts = computed(() =>
   )
 );
 
-// Get paginated posts for the current page
 const paginatedPosts = computed(() => {
   const start = (currentPage.value - 1) * postsPerPage;
   return filteredPosts.value.slice(start, start + postsPerPage);
 });
 
-// Update the current page when pagination changes
 const setPage = (page) => {
   currentPage.value = page;
 };

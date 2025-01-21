@@ -1,6 +1,17 @@
-# Nuxt Minimal Starter
+# Blog Task
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This project is build on Nuxt 3 and tailwindcss and in this project we have covered following features:
+1. a Home page showing Posts
+2. a Contact Page with a simple validated form
+3. Header
+4. Footer
+5. Multi Language Support using i18n
+6. Search by Post title and Content
+7. Fetch posts from a mock api
+8. Responsive for all screen till mobile view
+9. a Slug or individual page for every post on click to read more
+10. Pagination is implemented by creating a simple custom component
+11. Deployed on Vercel Here is the Link: https://blog-task-puce.vercel.app/
 
 ## Setup
 
@@ -10,15 +21,6 @@ Make sure to install dependencies:
 # npm
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
 
 ## Development Server
 
@@ -28,48 +30,5 @@ Start the development server on `http://localhost:3000`:
 # npm
 npm run dev
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
