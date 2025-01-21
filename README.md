@@ -13,6 +13,12 @@ This project is build on Nuxt 3 and tailwindcss and in this project we have cove
 10. Pagination is implemented by creating a simple custom component
 11. Deployed on Vercel Here is the Link: https://blog-task-puce.vercel.app/
 
+This Project Video display:
+
+[screen-capture (2).webm](https://github.com/user-attachments/assets/35aca764-1fb0-4c09-8111-aa1824cc92db)
+
+
+
 ## Setup
 
 Make sure to install dependencies:
